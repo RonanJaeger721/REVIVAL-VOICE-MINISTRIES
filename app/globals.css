@@ -6,3 +6,4 @@
 @media(max-width:360px){.container{width:calc(100% - 32px)}.nav-inner{width:calc(100% - 28px);gap:8px}.nav-join{font-size:7px}.hero .action{gap:6px;padding:10px 11px;font-size:9px}.hero-photo{height:390px}.hero h1{font-size:33px}.hero-copy .eyebrow{font-size:7px}.welcome h2{font-size:30px}.siip-home .declaration{font-size:18px}.leader-section .portrait{height:420px}.page-opening h1{font-size:36px}.siip-opening h1{font-size:54px}.contact-number{font-size:27px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal:not(.is-visible){opacity:1;translate:none}.hero-photo{transform:none!important}}
 .portrait img{object-position:50% 15%}.gathering img{object-position:50% 35%}
+.gathering img{object-position:50% 0%}
