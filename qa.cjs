@@ -8,10 +8,3 @@ await page.goto(base+'/prayer-requests');await page.getByLabel('Your prayer requ
 await page.goto(base+'/events/not-published');if(!(await page.locator('h1').innerText()).includes('back home'))throw Error('404');
 await page.setViewportSize({width:1440,height:1000});await page.goto(base);await page.locator('img').evaluateAll(async imgs=>Promise.all(imgs.map(async i=>{i.loading='eager';await i.decode().catch(()=>{})})));await page.waitForTimeout(900);await page.screenshot({path:path.resolve('../desktop.png'),fullPage:true});await page.setViewportSize({width:390,height:844});await page.goto(base);await page.screenshot({path:path.resolve('../mobile.png'),fullPage:true});
 await page.emulateMedia({reducedMotion:'reduce'});await page.goto(base);if(await page.locator('.reveal').first().evaluate(e=>getComputedStyle(e).opacity)!=='1')throw Error('Reduced motion');if(errors.length)throw Error(errors.join('\n'));console.log(JSON.stringify({base,checks:count,interactions:'menu, journey, search, filters, prayer review, handoff URL, unpublished event, reduced motion',errors}));await browser.close()})().catch(e=>{console.error(e);process.exit(1)});
-
-
-
-
-
-
-
